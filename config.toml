@@ -2,7 +2,7 @@ baseURL = 'http://kn100.me/'
 languageCode = 'en-gb'
 title = 'Kevin Norman'
 theme = "ananke"
-
+googleAnalytics = "UA-116596166-1"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 
