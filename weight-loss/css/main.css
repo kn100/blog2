@@ -1,0 +1,38 @@
+.bigMetricLabel {
+    font-weight: bold;
+}
+
+.bigMetricContainer {
+    background-color: #f8f9fa;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bigMetricHeader {
+    background-color: #17a2b8;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.bigMetric {
+    font-size: 36px;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 90, 150, 0.1);
+}
+
+.weightStatusBar {
+    padding-top: 120px;
+}
