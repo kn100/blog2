@@ -1,4 +1,6 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'http://kn100.me/'
+languageCode = 'en-gb'
+title = 'kn100.me'
 theme = "ananke"
+[permalinks]
+  posts = "/:slug"
