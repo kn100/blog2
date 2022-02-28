@@ -1,3 +1,4 @@
+// This code is terrible who let me write frontend code
 document.addEventListener("DOMContentLoaded", function(event) { makeGraphs() });
 var weightChart;
 var muscleMassPercChart;
