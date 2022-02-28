@@ -48,19 +48,34 @@
       {{ end }}
     </header>
     <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} pr4-l w-two-thirds-l">
-        {{ if .Params.containsAffiliate }}
-        <p>Heads up: Links in this blog post are affiliate links.</p>
-      {{ end }}
       {{ if .Params.hnDiscussion }}
-        <a href="{{ .Params.hnDiscussion }}">HN </a>
+        <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
       {{ end }}
       {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
         |
       {{ end}}
       {{ if .Params.redditDiscussion }}
-      <a href="{{ .Params.redditDiscussion }}">Reddit</a>
-    {{ end }}
+        <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
+      {{ end }}
+      <p>
+        {{ if .Params.dangerous }}
+          <b>BE CAREFUL!</b> This post has been marked as potentially dangerous either to health or the devices discussed. You follow this post at your own risk.
+        {{ end }}
+        {{ if .Params.containsAffiliate }}
+          <br/><b>Links to purchases in this blog post are affiliate links.</b>
+        {{ end }}
+      </p>
       {{- .Content -}}
+      {{ if .Params.hnDiscussion }}
+        <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
+      {{ end }}
+      {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
+        |
+      {{ end}}
+      {{ if .Params.redditDiscussion }}
+        <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
+      {{ end }}
+      <p>Let me know what you thought! Tweet me at <a target="_blank" href="https://twitter.com/normankev141/">@normankev141</a>  </p>
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
       {{ if .Site.DisqusShortname }}
