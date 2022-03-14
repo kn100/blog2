@@ -1,0 +1,31 @@
+---
+title: "Euchre"
+description: "This is a card game for four players divided into two teams. The object of the game is to score 10 points. First, each player in turn has the option of accepting the face-up card's suit as the trump or passing. If any player accepts the face-up card as trump, the dealer adds this..."
+slug: "Euchre"
+tags: ["cybiko-game-e"]
+images: ["/public/resources/Euchre/intro-pic.png"]
+draft: false
+show_reading_time: false
+featured_image: "/public/resources/Euchre/intro-pic.png"
+is_cybiko_game_page: true
+ignore_hero: true
+---
+{{< figure src="/public/resources/Euchre/intro-pic.png" class="fr" alt="Euchre Cybiko game intro image" >}}
+This is a card game for four players divided into two teams. The object of the game is to score 10 points. First, each player in turn has the option of accepting the face-up card's suit as the trump or passing. If any player accepts the face-up card as trump, the dealer adds this card to his/her hand. If all four players pass, the players select the trump suit again, except the suit of the face-up card, or pass. The dealer must name a trump suit if everyone else has passed. The Jack of trump suit and the Jack in the same color as the trump suit are the highest-ranking trumps. If you choose trump, you can play alone. The player to the left of the dealer leads any card. Each player in turn must play a card of the same suit led, if they are able. If they are unable to follow suit, a player may play any card. The player who played the highest card wins the trick. The team of the player who played the trump gains 1 point by taking at least 3 tricks, and receives 2 for taking all 5. If they take fewer than three tricks, they receive no points, while their opponents score 2 points. A player who plays alone and wins all five tricks scores 4 points. Game play continues until any player's team scores 10 points. \
+For full detailed rules see our site www.cybiko.com \
+Use `<Up/Down arrows>`  to name the trump or to pass, and to choose single or pair game. \
+Press `<Enter>`  to confirm your choice. \
+Use `<Left/Right arrows>`  to mark a card with the highlight. \
+Press `<Enter>`  to place marked card on playing table. \
+Use `<Tab>`  to hide the menu and any other key to show it again. \
+Press `<Esc>`  to exit the game. \
+Version 2.1.28 \
+COPYRIGHT © 2000 CYBIKO, Inc. \
+ {{< figure src="/public/resources/Euchre/root-ico.png" class="fr" alt="Euchre Cybiko game icon" >}}
+
+## Other Resources
+* [cards-pic.png](/public/resources/Euchre/cards-pic.png) - Screenshot of PicView.exe from Cybiko SDK
+* [heart-pic.png](/public/resources/Euchre/heart-pic.png) - Screenshot of PicView.exe from Cybiko SDK
+* [intro-pic.png](/public/resources/Euchre/intro-pic.png) - Screenshot of PicView.exe from Cybiko SDK
+* [root-ico.png](/public/resources/Euchre/root-ico.png) - Screenshot of PicView.exe from Cybiko SDK
+* [root-spl.txt](/public/resources/Euchre/root-spl.txt) - Text file converted from iso-8859-1 to utf-8 using iconv

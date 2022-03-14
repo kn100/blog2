@@ -1,0 +1,31 @@
+---
+title: "St Patties Plunder"
+description: "Version 1.1.25 This is a one-player game. The goal is make it through the maze alive, collecting as much gold as possible before your time runs out. The game has 5 levels. Entering a door with a cross on it advances you to the next level. On your way you might cross paths with u..."
+slug: "St_Patties_Plunder"
+tags: ["cybiko-game-s"]
+images: ["/public/resources/St_Patties_Plunder/intro-pic.png"]
+draft: false
+show_reading_time: false
+featured_image: "/public/resources/St_Patties_Plunder/intro-pic.png"
+is_cybiko_game_page: true
+ignore_hero: true
+---
+{{< figure src="/public/resources/St_Patties_Plunder/intro-pic.png" class="fr" alt="St Patties Plunder Cybiko game intro image" >}}
+Version 1.1.25 \
+This is a one-player game. The goal is make it through the maze alive, collecting as much gold as possible before your time runs out. The game has 5 levels. Entering a door with a cross on it advances you to the next level. On your way you might cross paths with unfriendly creatures. Leprechauns can be killed, but you can get a big bonus by bringing them in alive with the net gun. You can only kill gnomes by using a bat or a tazer. Fairies appear from random treasure chests and breakable walls. They can live in the outside air for 15 seconds before disappearing, but you can't kill them. Your arsenal includes a baseball bat, a tazer and a net gun. The net gun and tazer become available as you advance to higher levels. There are several different power-ups: a battery pack for charging the tazer, a health pack, a heart (additional life), and a magic clover that empowers you to open all doors. The map displays the corridors of the maze you've already been in, and the black dot shows your current position. You win gold pieces for each destroyed enemy, in treasure chests and as bonuses. The game ends when you loose all your lives, or if your time runs out. You win the game when you pass the 5th and last level.  \
+Use `<Up/Down arrows>`  to move forward and backward. \
+Use `<Left/Right arrows>`  to turn left and right. \
+Press `<Shift>`  and `<Fn>`  to step left and right. \
+Press `<Enter>`  to fire. \
+Press `<Select>`  to select a weapon. \
+Hold `<Space>`  and walk on a chest to open it. \
+Press `<Del>`  while walking into a wall to break it. \
+Press `<Tab>`  to show a map.  \
+Press `<Tab>`  or `<Esc>`  to hide the map. \
+Press `<Esc>`  to go to the Game Menu. \
+COPYRIGHT © 2001 CYBIKO, Inc. {{< figure src="/public/resources/St_Patties_Plunder/root-ico.png" class="fr" alt="St Patties Plunder Cybiko game icon" >}}
+
+## Other Resources
+* [intro-pic.png](/public/resources/St_Patties_Plunder/intro-pic.png) - Screenshot of PicView.exe from Cybiko SDK
+* [root-ico.png](/public/resources/St_Patties_Plunder/root-ico.png) - Screenshot of PicView.exe from Cybiko SDK
+* [root-spl.txt](/public/resources/St_Patties_Plunder/root-spl.txt) - Text file converted from iso-8859-1 to utf-8 using iconv
