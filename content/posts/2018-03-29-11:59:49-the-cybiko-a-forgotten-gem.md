@@ -4,7 +4,8 @@ description: ""
 slug: "the-cybiko-a-forgotten-gem"
 tags: ["cybiko", "stories"]
 date: 2018-03-29T11:59:49+01:00
-images: ["/cybiko.JPG"]
+images: ["/posts/cybiko-classic-2022/cybiko-intro.jpg"]
+featured_image: "/posts/cybiko-classic-2022/cybiko-intro.jpg"
 draft: false
 ---
 

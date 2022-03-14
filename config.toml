@@ -5,6 +5,7 @@ theme = "ananke"
 googleAnalytics = "UA-116596166-1"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
+pluralizelisttitles = "false"
 
 [permalinks]
   posts = "/:slug"
@@ -22,6 +23,7 @@ SectionPagesMenu = "main"
   background_color_class = "bg-dark-gray"
   recent_posts_number = 6
   show_reading_time = true
+  mainSections = ["posts"]
 
 [[params.ananke_socials]]
 name = "twitter"
@@ -30,19 +32,11 @@ label = "Twitter"
 [[params.ananke_socials]]
 name = "linkedin"
 url = "https://linkedin.com/in/kevin-norman"
-label = "Linkedin"
+label = "LinkedIn"
 [[params.ananke_socials]]
 name = "github"
 url = "https://github.com/kn100"
 label = "Github"
-[[params.ananke_socials]]
-name = "email"
-url = "mailto:kn100+blog@kn100.me"
-label = "Email"
-[[params.ananke_socials]]
-name = "cysite"
-url = "https://cybiko.kn100.me/"
-label = "Cybiko Archive"
 [[params.ananke_socials]]
 name = "wloss"
 url = "https://kn100.me/weight-loss/"

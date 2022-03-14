@@ -5,6 +5,7 @@ slug: "redis-pipelining"
 tags: ["software", "stories"]
 date: 2019-04-16T19:59:23+01:00
 images: ["/posts/redis-pipelining/intro.png"]
+featured_image: "/posts/redis-pipelining/intro.png"
 draft: false
 ---
 
