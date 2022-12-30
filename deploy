@@ -3,7 +3,7 @@ USER=kn100
 HOST="[202.61.250.255]"
 DIR=sites/blog   # might sometimes be empty!
 
-HUGO_ENV=production hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
-rsync -avz weight-loss/ ${USER}@${HOST}:~/${DIR}/weight-loss
+HUGO_ENV=production hugo && rsync -avz -e 'ssh -p 22212' --delete public/ ${USER}@${HOST}:~/${DIR}
+rsync -avz -e 'ssh -p 22212' weight-loss/ ${USER}@${HOST}:~/${DIR}/weight-loss
 
 exit 0
