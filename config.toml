@@ -37,8 +37,4 @@ label = "LinkedIn"
 name = "github"
 url = "https://github.com/kn100"
 label = "Github"
-[[params.ananke_socials]]
-name = "wloss"
-url = "https://kn100.me/weight-loss/"
-label = "Body Metrics"
 
