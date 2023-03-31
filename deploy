@@ -1,9 +1,0 @@
-#!/bin/sh
-USER=kn100
-HOST="viper"
-DIR=sites/blog   # might sometimes be empty!
-
-HUGO_ENV=production hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
-rsync -avz weight-loss/ ${USER}@${HOST}:~/${DIR}/weight-loss
-
-exit 0
