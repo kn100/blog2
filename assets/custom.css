@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #111111;
+        color: #EFEFEF;
+    }
+    a {
+        color: #c5d86dff;
+    }
+    a:visited {
+        color: #CCEECC;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: #3b1f2bff;
+    }
+    a {
+        color: #53917eff;
+    }
+    a:visited {
+        color: #442B48;
+    }
+}
+
+.Banner-item a:visited, .Tags-item a:visited {
+    color: #FFFFFF;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}

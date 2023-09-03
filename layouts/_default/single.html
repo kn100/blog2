@@ -1,95 +1,38 @@
-{{ define "header" }}
-   {{/* We can override any block in the baseof file be defining it in the template */}}
-  {{ partial "page-header.html" . }}
-{{ end }}
-
 {{ define "main" }}
-  {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          {{/*
-          CurrentSection allows us to use the section title instead of inferring from the folder.
-          https://gohugo.io/variables/page/#section-variables-and-methods
-          */}}
-        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
-      </aside>
-      {{ partial "social-share.html" . }}
-      <h1 class="f1 athelas mt3 mb1">
-        {{- .Title -}}
-      </h1>
-      {{ with .Params.author | default .Site.Params.author }}
-      <p class="tracked">
-          By <strong>
-          {{ if reflect.IsSlice . }}
-              {{ delimit . ", " | markdownify }}
-          {{else}}
-              {{ . | markdownify }}
-          {{ end }}
-          </strong>
-      </p>
-      {{ end }}
-      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-      {{ if not .Date.IsZero }}
-      <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
-        {{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
-      </time>
-      {{end}}
 
-      {{/*
-          Show "reading time" and "word count" but only if one of the following are true:
-          1) A global config `params` value is set `show_reading_time = true`
-          2) A section front matter value is set `show_reading_time = true`
-          3) A page front matter value is set `show_reading_time = true`
-        */}}
-      {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
-        <span class="f6 mv4 dib tracked"> - {{ i18n "readingTime" .ReadingTime }} </span>
-        <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
-      {{ end }}
-    </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} pr4-l w-two-thirds-l">
-      {{ if .Params.hnDiscussion }}
-        <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
-      {{ end }}
-      {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
-        |
-      {{ end}}
-      {{ if .Params.redditDiscussion }}
-        <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
-      {{ end }}
-      <p>
-        {{ if .Params.dangerous }}
-          <b>BE CAREFUL!</b> This post has been marked as potentially dangerous either to health or the devices discussed. You follow this post at your own risk.
-        {{ end }}
-        {{ if .Params.containsAffiliate }}
-          <br/><b>Links to purchases in this blog post are affiliate links.</b>
-        {{ end }}
-      </p>
-      {{- .Content -}}
-      {{ if .Params.hnDiscussion }}
-        <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
-      {{ end }}
-      {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
-        |
-      {{ end}}
-      {{ if .Params.redditDiscussion }}
-        <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
-      {{ end }}
-      <p>Let me know what you thought! Tweet me at <a target="_blank" href="https://twitter.com/normankev141/">@normankev141</a>  </p>
-      {{- partial "tags.html" . -}}
-      <div class="mt6 instapaper_ignoref">
-      {{ if .Site.DisqusShortname }}
-        {{ template "_internal/disqus.html" . }}
-      {{ end }}
-      {{ if .Site.Params.commentoEnable }}
-        {{- partial "commento.html" . -}}
-      {{ end }}
-      </div>
-    </div>
-
-    <aside class="w-30-l mt6-l">
-      {{- partial "menu-contextual.html" . -}}
-    </aside>
-
+  <article>
+    {{ partial "heading.html" . }}
+    {{ if .Params.hnDiscussion }}
+    <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
+  {{ end }}
+  {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
+    |
+  {{ end}}
+  {{ if .Params.redditDiscussion }}
+    <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
+  {{ end }}
+  <p>
+    {{ if .Params.dangerous }}
+      <b>BE CAREFUL!</b> This post has been marked as potentially dangerous either to health or the devices discussed. You follow this post at your own risk.
+    {{ end }}
+    {{ if .Params.containsAffiliate }}
+      <br/><b>Links to purchases in this blog post are affiliate links.</b>
+    {{ end }}
+  </p>
+  {{- .Content -}}
+  {{ if .Params.hnDiscussion }}
+    <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
+  {{ end }}
+  {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
+    |
+  {{ end}}
+  {{ if .Params.redditDiscussion }}
+    <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
+  {{ end }}
+  <p>Let me know what you thought! Hit me up on Mastodon at <a target="_blank" href="https://fosstodon.org/@kn100@fosstodon.org" rel="me">@kn100@fosstodon.org</a>.  </p>
+  
+    {{ partial "tags.html" . }}
+    {{ partial "comments.html" . }}
   </article>
+
 {{ end }}
