@@ -34,7 +34,7 @@ params:
     This is the personal blog of Kevin Norman. 
     Any opinions expressed here are not representative of any organisation or employer I am or have been affiliated with.
     Any information or guides provided here are for educational purposes only. You are responsible for your own actions. Please don't electrocute yourself!
-    Hit me up on Mastodon! <a href="https://fosstodon.org/@kn100@fosstodon.org" rel="me">@kn100@fosstodon.org</a>
+    Hit me up on Mastodon! <a href="https://fosstodon.org/@kn100" rel="me">@kn100@fosstodon.org</a>
 menu:
   nav:
     - name: All Posts
