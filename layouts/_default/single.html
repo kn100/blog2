@@ -3,13 +3,16 @@
   <article>
     {{ partial "heading.html" . }}
     {{ if .Params.hnDiscussion }}
-    <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
+    <a target="_blank" href="{{ .Params.hnDiscussion }}">Hacker News </a>
   {{ end }}
   {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
     |
   {{ end}}
   {{ if .Params.redditDiscussion }}
     <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
+  {{ end }}
+  {{ if .Params.lemmyDiscussion }}
+    <a target="_blank" href="{{ .Params.lemmyDiscussion }}"> | Lemmy</a>
   {{ end }}
   <p>
     {{ if .Params.dangerous }}
@@ -21,7 +24,7 @@
   </p>
   {{- .Content -}}
   {{ if .Params.hnDiscussion }}
-    <a target="_blank" href="{{ .Params.hnDiscussion }}">HN </a>
+    <a target="_blank" href="{{ .Params.hnDiscussion }}">Hacker News</a>
   {{ end }}
   {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
     |
@@ -29,6 +32,10 @@
   {{ if .Params.redditDiscussion }}
     <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
   {{ end }}
+  {{ if .Params.lemmyDiscussion }}
+    <a target="_blank" href="{{ .Params.lemmyDiscussion }}"> | Lemmy</a>
+  {{ end }}
+  
   <p>Let me know what you thought! Hit me up on Mastodon at <a target="_blank" href="https://fosstodon.org/@kn100" rel="me">@kn100@fosstodon.org</a>.  </p>
   
     {{ partial "tags.html" . }}
