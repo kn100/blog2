@@ -1,5 +1,45 @@
-{{ with site.Params.footer }}
-  <footer class="u-wrapper">
-    {{ safeHTML . }}
-  </footer>
-{{ end }}
+<footer class="site-footer">
+  <div class="u-wrapper">
+    <div class="footer-layout">
+      <div class="footer-branding">
+        <a href="/" class="footer-logo">
+          <img src="{{ site.Params.site_logo }}" alt="{{ site.Title }} logo">
+          <span>{{ site.Title }}</span>
+        </a>
+        <p class="footer-description"> This is the personal blog of Kevin Norman.
+          Any opinions expressed here are not representative of any organisation or employer I am or have been
+          affiliated with.
+          Any information or guides provided here are for educational purposes only. You are responsible for your own
+          actions. Please don't electrocute yourself!
+          Hit me up on Mastodon! <a href="https://fosstodon.org/@kn100" rel="me">@kn100@fosstodon.org</a></p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            {{- range site.Menus.main -}}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{- end -}}
+            <li><a href="/index.xml">RSS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a target="_blank" href="https://fosstodon.org/@kn100">Mastodon</a></li>
+            <li><a target="_blank" href="https://github.com/kn100">GitHub</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/kevin-norman/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-legal">
+      {{ with site.Params.footer }}
+      <div class="footer-disclaimer">{{ safeHTML . }}</div>
+      {{ end }}
+    </div>
+  </div>
+</footer>

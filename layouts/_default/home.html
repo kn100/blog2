@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+<div class="u-wrapper">
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   
   <div class="home-posts">
@@ -15,5 +15,5 @@
       </ul>
     {{ end }}
   </div>
-
+</div>
 {{ end }}

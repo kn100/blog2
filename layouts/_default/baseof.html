@@ -3,9 +3,9 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="u-noboosting">
+<body class="u-noboosting kind-{{ .Kind }} type-{{ .Type }}">
   {{ partial "nav.html" . }}
-  <main class="u-wrapper">
+  <main>
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

@@ -1,9 +1,8 @@
 {{ define "main" }}
-
-  <header class="Heading">
-    <h1 class="Heading-title">{{ .Title }}</h1>
+<div class="u-wrapper">
+  <header class="article-header">
+    <h1>{{ .Title }}</h1>
   </header>
-
   <div class="list-content">
     {{ .Content }}
   </div>
@@ -18,5 +17,5 @@
       {{ end }}
     </ul>
   {{ end }}
-
+</div>
 {{ end }}
