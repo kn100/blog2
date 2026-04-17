@@ -1,3 +1,0 @@
-Text Editor creates small notes.
-Version 1.1.9
-COPYRIGHT © 2000 CYBIKO, Inc.

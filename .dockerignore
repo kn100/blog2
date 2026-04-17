@@ -1,0 +1,8 @@
+.git
+.direnv
+.envrc
+.env
+.kamal
+public
+resources
+.hugo_build.lock

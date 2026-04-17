@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+  <header class="Heading">
+    <h1 class="Heading-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="list-content">
+    {{ .Content }}
+  </div>
+
+  {{ range .Pages.GroupByPublishDate "2006" }}
+    <h2>{{ .Key }}</h2>
+    <ul class="post-list">
+      {{ range .Pages }}
+        <li>
+          {{ time.Format "2006-01-02" .PublishDate }} – <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+{{ end }}

@@ -2,3 +2,5 @@ public/*
 resources/*
 static/Random-files/*
 temporarily-removed/*
+.direnv
+.envrc

@@ -1,0 +1,62 @@
+baseURL: 'http://kn100.me/'
+languageCode: en-gb
+title: kn100
+DefaultContentLanguage: en
+pluralizelisttitles: 'false'
+
+permalinks:
+  posts: '/:slug'
+
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  filename: sitemap.xml
+
+params:
+  color: '#3b1f2bff'
+  favicon: /site-resources/logonotext.png
+  site_logo: /site-resources/logonotext.png
+  description: >-
+    kn100 (Kevin Norman) personal blog, discussing tech, cybiko, life,
+    electronics, hacking, etc.
+  recent_posts_number: 6
+  mainSections:
+    - posts
+  summaries: true
+  opengraph: true
+  twittercards: true
+  footer: >-
+    This is the personal blog of Kevin Norman. 
+    Any opinions expressed here are not representative of any organisation or employer I am or have been affiliated with.
+    Any information or guides provided here are for educational purposes only. You are responsible for your own actions. Please don't electrocute yourself!
+    Hit me up on Mastodon! <a href="https://fosstodon.org/@kn100" rel="me">@kn100@fosstodon.org</a>
+
+menu:
+  main:
+    - name: About
+      pageRef: /about
+      weight: 1
+    - name: Github
+      url: https://github.com/kn100
+      weight: 4
+    - name: Linkedin
+      url: https://www.linkedin.com/in/kevin-norman/
+      weight: 5
+    - name: Mastodon
+      url: https://fosstodon.org/@kn100
+      weight: 6
+
+imaging:
+  quality: 80
+  resampleFilter: lanczos
+  anchor: smart
+  webp:
+    hint: photo
+    method: 4
+
+markup:
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true

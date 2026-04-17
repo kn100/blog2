@@ -1,3 +1,0 @@
-The object is to destroy the Permanent Stack, and it's not easy. But you may try!
-Version 1.1.1
-© CYBIKO Inc., 1999

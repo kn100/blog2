@@ -1,0 +1,26 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default (.Get "title" | default "") -}}
+{{- $img := .Page.Resources.GetMatch $src -}}
+{{- if $img -}}
+  {{- $maxWidth := 964 -}}
+  {{- $orig := $img -}}
+  {{- if gt $img.Width $maxWidth -}}
+    {{- $orig = $img.Resize (printf "%dx" $maxWidth) -}}
+  {{- end -}}
+  {{- $webp := $orig.Resize (printf "%dx webp" $orig.Width) -}}
+<figure class="shortcode-figure">
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $orig.RelPermalink }}" alt="{{ $alt }}"
+         width="{{ $orig.Width }}" height="{{ $orig.Height }}"
+         loading="lazy" decoding="async">
+  </picture>
+  {{- with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<figure class="shortcode-figure-fallback">
+  <img src="{{ $src | relURL }}" alt="{{ $alt }}">
+  {{- with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- end -}}

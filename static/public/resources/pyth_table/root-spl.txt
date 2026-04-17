@@ -1,3 +1,0 @@
-Pythagoreans believe that numbers determine everything in life. Just enter your date of birth to learn more about your strengths and weaknesses!
-Version 1.2.3 
-COPYRIGHT © 2000 CYBIKO, Inc.

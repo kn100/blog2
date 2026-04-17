@@ -1,0 +1,30 @@
+{{- $img := .PageInner.Resources.GetMatch .Destination -}}
+{{- if $img -}}
+  {{- $maxWidth := 964 -}}
+  {{- $orig := $img -}}
+  {{- if gt $img.Width $maxWidth -}}
+    {{- $orig = $img.Resize (printf "%dx" $maxWidth) -}}
+  {{- end -}}
+  {{- $webp := $orig.Resize (printf "%dx webp" $orig.Width) -}}
+  {{- if .IsBlock }}
+<figure class="markup-image">
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $orig.RelPermalink }}"
+         width="{{ $orig.Width }}" height="{{ $orig.Height }}"
+         alt="{{ .PlainText }}" loading="lazy" decoding="async">
+  </picture>
+  {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+  {{- else -}}
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $orig.RelPermalink }}"
+         width="{{ $orig.Width }}" height="{{ $orig.Height }}"
+         alt="{{ .PlainText }}" loading="lazy" decoding="async">
+  </picture>
+  {{- end }}
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}"
+    {{- with .Title }} title="{{ . }}"{{ end }}>
+{{- end -}}

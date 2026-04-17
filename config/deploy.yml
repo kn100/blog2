@@ -1,0 +1,31 @@
+service: blog
+image: kn100/blog
+
+servers:
+  web:
+    hosts:
+      - entrycast-prod
+
+proxy:
+  ssl: true
+  hosts:
+    - kn100.me
+  app_port: 80
+  healthcheck:
+    path: /up
+
+registry:
+  username: kn100
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+ssh:
+  user: kn100
+  port: 60234
+
+builder:
+  arch: amd64
+
+env:
+  secret:
+    - KAMAL_REGISTRY_PASSWORD

@@ -1,3 +1,0 @@
-In this solitaire the deck is dealt in groups of three cards - from here the game gets the name Triads.
-Version 1.1.1
-© CYBIKO Inc., 1999

@@ -1,0 +1,8 @@
+<header class="site-header u-wrapper">
+  <a class="site-title" href="{{ relLangURL nil }}">{{ site.Title }}</a>
+  <nav>
+    {{ range site.Menus.main }}
+      <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+</header>

@@ -1,3 +1,0 @@
-This application tests and expands your French vocabulary. You will be asked to choose the correct translation from many variants.
-Version 1.2.2
-COPYRIGHT © 2000 CYBIKO, Inc.

@@ -1,45 +1,43 @@
 {{ define "main" }}
 
   <article>
-    {{ partial "heading.html" . }}
-    {{ if .Params.hnDiscussion }}
-    <a target="_blank" href="{{ .Params.hnDiscussion }}">Hacker News </a>
-  {{ end }}
-  {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
-    |
-  {{ end}}
-  {{ if .Params.redditDiscussion }}
-    <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
-  {{ end }}
-  {{ if .Params.lemmyDiscussion }}
-    <a target="_blank" href="{{ .Params.lemmyDiscussion }}"> | Lemmy</a>
-  {{ end }}
-  <p>
-    {{ if .Params.dangerous }}
-      <b>BE CAREFUL!</b> This post has been marked as potentially dangerous either to health or the devices discussed. You follow this post at your own risk.
-    {{ end }}
-    {{ if .Params.containsAffiliate }}
-      <br/><b>Links to purchases in this blog post are affiliate links.</b>
-    {{ end }}
-  </p>
-  {{- .Content -}}
-  {{ if .Params.hnDiscussion }}
-    <a target="_blank" href="{{ .Params.hnDiscussion }}">Hacker News</a>
-  {{ end }}
-  {{ if and .Params.hnDiscussion .Params.redditDiscussion }}
-    |
-  {{ end}}
-  {{ if .Params.redditDiscussion }}
-    <a target="_blank" href="{{ .Params.redditDiscussion }}">Reddit</a>
-  {{ end }}
-  {{ if .Params.lemmyDiscussion }}
-    <a target="_blank" href="{{ .Params.lemmyDiscussion }}"> | Lemmy</a>
-  {{ end }}
-  
-  <p>Let me know what you thought! Hit me up on Mastodon at <a target="_blank" href="https://fosstodon.org/@kn100" rel="me">@kn100@fosstodon.org</a>.  </p>
-  
-    {{ partial "tags.html" . }}
-    {{ partial "comments.html" . }}
+    {{ partial "article-heading.html" . }}
+    
+    {{- $links := slice -}}
+    {{- if .Params.hnDiscussion }}{{ $links = $links | append (dict "name" "Hacker News" "url" .Params.hnDiscussion) }}{{ end -}}
+    {{- if .Params.redditDiscussion }}{{ $links = $links | append (dict "name" "Reddit" "url" .Params.redditDiscussion) }}{{ end -}}
+    {{- if .Params.lemmyDiscussion }}{{ $links = $links | append (dict "name" "Lemmy" "url" .Params.lemmyDiscussion) }}{{ end -}}
+    
+    {{- if $links -}}
+    <ul class="discussion-links">
+      <li>Discuss on: </li>
+      {{- range $links -}}
+        <li><a target="_blank" href="{{ .url }}">{{ .name }}</a></li>
+      {{- end -}}
+    </ul>
+    {{- end -}}
+    
+    <p>
+      {{ if .Params.dangerous }}
+        <b>BE CAREFUL!</b> This post has been marked as potentially dangerous either to health or the devices discussed. You follow this post at your own risk.
+      {{ end }}
+      {{ if .Params.containsAffiliate }}
+        <br/><b>Links to purchases in this blog post are affiliate links.</b>
+      {{ end }}
+    </p>
+
+    {{- .Content -}}
+
+    {{- if $links -}}
+    <ul class="discussion-links">
+      <li>Discuss on: </li>
+      {{- range $links -}}
+        <li><a target="_blank" href="{{ .url }}">{{ .name }}</a></li>
+      {{- end -}}
+    </ul>
+    {{- end -}}
+    
+    <p>Let me know what you thought! Hit me up on Mastodon at <a target="_blank" href="https://fosstodon.org/@kn100" rel="me">@kn100@fosstodon.org</a>.  </p>
   </article>
 
 {{ end }}

@@ -1,0 +1,8 @@
+<header class="article-header">
+  <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+  {{ with .PublishDate }}
+    <time datetime="{{ time.Format "2006-01-02" . }}">
+      {{- time.Format ":date_long" . -}}
+    </time>
+  {{ end }}
+</header>

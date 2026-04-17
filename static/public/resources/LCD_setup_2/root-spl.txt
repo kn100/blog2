@@ -1,3 +1,0 @@
-This application allows you to change the brightness and the contrast of your display's colors.
-Version 1.1.2
-© CYBIKO Inc., 1999

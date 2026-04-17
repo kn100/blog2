@@ -1,2 +1,0 @@
-Shapes is a logical game for one player. Try to score points for arranged shapes.
-© CYBIKO Inc., 1999

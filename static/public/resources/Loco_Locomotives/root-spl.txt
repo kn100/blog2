@@ -1,3 +1,0 @@
-Race your opponent and find the fastest way to the other side of the maze.
-Version 1.1.13
-COPYRIGHT © 2000 CYBIKO, Inc.
