@@ -1,0 +1,5 @@
+{{- $title := .Get "title" | default "" -}}
+<aside class="notice">
+  {{- with $title }}<p class="notice-title">{{ . }}</p>{{ end }}
+  {{ .Inner | markdownify }}
+</aside>

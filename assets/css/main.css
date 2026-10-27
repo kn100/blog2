@@ -357,6 +357,37 @@ code {
     }
 }
 
+/* Notice callout */
+.notice {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.notice > :last-child {
+    margin-bottom: 0;
+}
+
+.notice-title {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
+@media (prefers-color-scheme: dark) {
+    .notice {
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
 /* Discussion Links */
 .discussion-links {
     list-style: none;
